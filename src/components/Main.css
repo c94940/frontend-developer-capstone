@@ -1,31 +1,84 @@
-.hero {
-    display: flex;
-    background-color: #495E57;
-    height: 60vh;
+main {
+    font-family: 'Instrument Sans';
 }
 
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.hero img {
-    height: 100%;
-    margin: 20px;
-}
-
-.hero h1 {
+main h1 {
+    font-family: 'Instrument Sans';
     font-size: 48pt;
     font-weight:bold;
     color: #F4CE14;
 }
 
-.hero h2 {
+main h2 {
     font-size: 32pt;
     font-family:'Merriweather';
     color: white;
 }
+
+main h3 {
+    font-size: 24pt;
+    font-family:'Merriweather';
+    color: #495E57;
+}
+
+main p {
+    font-size: 12pt;
+    font-family: 'Merriweather';
+    color: black;
+}
+
+main button {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #F4CE14;
+    color: #495E57;
+    font-weight: bold;
+    font-size: 16pt;
+    border-radius: 10pt;
+    border: none;
+    /* box-shadow: 2px 2px 5px white; */
+}
+
+.hero {
+    display: flex;
+    background-color: #495E57;
+    /* height: 400px; */
+}
+
+.hero-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100%; */
+    padding: 50px 50px;
+    /* border: 1px solid; */
+}
+
+.hero-image-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 50px;
+    border: 1px solid;
+}
+
+.hero img {
+    height: 300px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* .hero h1 {
+    font-size: 48pt;
+    font-weight:bold;
+    color: #F4CE14;
+} */
+
+/* .hero h2 {
+    font-size: 32pt;
+    font-family:'Merriweather';
+    color: white;
+} */
 
 .hero p {
     font-size: 12pt;
@@ -33,7 +86,7 @@
     color: white;
 }
 
-.hero button {
+/* .hero button {
     padding: 10px;
     margin: 10px 0;
     background-color: #F4CE14;
@@ -43,14 +96,70 @@
     border-radius: 10pt;
     border: none;
     box-shadow: 2px 2px 5px white;
-}
+} */
 
 .specials {
     background-color: white;
 }
 
+.specials-menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 50px;
+    border: 1px solid;
+}
+
+
+.specials-menu-container h3 {
+    display: flex;
+    margin: 0;
+    border: 1px solid;
+}
+
+.special-card-container {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid;
+}
+
+.special-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid;
+}
+
+.special-card p {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    /* padding: 10px; */
+    border: 1px solid;
+}
+
 .customer-reviews {
     background-color: #F4CE14;
+}
+
+.customer-reviews h3 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid;
+}
+
+.review-card-container {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid;
+    padding: 20px;
+}
+
+.review-card-container p {
+    display: flex;
+    align-items: center;
+    margin: 0;
 }
 
 .about {
