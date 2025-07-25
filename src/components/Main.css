@@ -1,0 +1,58 @@
+.hero {
+    display: flex;
+    background-color: #495E57;
+    height: 60vh;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.hero img {
+    height: 100%;
+    margin: 20px;
+}
+
+.hero h1 {
+    font-size: 48pt;
+    font-weight:bold;
+    color: #F4CE14;
+}
+
+.hero h2 {
+    font-size: 32pt;
+    font-family:'Merriweather';
+    color: white;
+}
+
+.hero p {
+    font-size: 12pt;
+    font-family: 'Merriweather';
+    color: white;
+}
+
+.hero button {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #F4CE14;
+    color: black;
+    font-weight: bold;
+    font-size: 16pt;
+    border-radius: 10pt;
+    border: none;
+    box-shadow: 2px 2px 5px white;
+}
+
+.specials {
+    background-color: white;
+}
+
+.customer-reviews {
+    background-color: #F4CE14;
+}
+
+.about {
+    background-color: #495E57;
+}

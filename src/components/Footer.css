@@ -1,5 +1,116 @@
 footer {
     display: flex;
+    /* height: 30vh;
+    min-height: 220px; */
+    background-color: #EAEAEA;
+    justify-content: center;
+    /* border: 1px solid; */
+}
+
+.logo-container {
+    display: flex;
+    align-items: top;
+    /* border: 1px solid; */
+}
+
+.logo-container img {
+    width: 150px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 20px;
+    width: 20vw;
+    /* border: 1px solid; */
+    word-wrap: break-word;
+}
+
+.footer-container ul {
+    padding: 0px;
+    list-style: none;
+    /* border: 1px solid; */
+}
+
+.footer-container li {
+    padding-bottom: 10px;
+}
+
+.footer-container a {
+    text-decoration: none;
+    font-weight: thin;
+    color: #495e57;
+}
+
+/*
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid;
+}
+
+.footer-logo {
+    padding: 10px 0 10px 0;
+}
+
+.footer-links {
+    display: flex;
+    text-decoration: none;
+}
+
+.footer-links a {
+    color: #495e57;;
+}
+
+.footer-section {
+    border: 1px solid;
+    width: 50%;
+    max-width: 50%;
+    padding: 10px;
+}
+
+.footer-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-section li {
+    text-align: left;
+    padding-bottom: 5px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+footer {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -14,7 +125,7 @@ footer {
 }
 
 .footer-logo img {
-    width: 150px; /* Adjust based on your logo size */
+    width: 150px;
     margin-right: 10px;
 }
 
@@ -44,10 +155,10 @@ footer {
 
 .footer-section a {
     text-decoration: none;
-    color: #000; /* Adjust based on your design */
+    color: #000; 
 }
 
-/* Media query for smaller screens */
+
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
@@ -65,12 +176,14 @@ footer {
     }
 }
 
-/* Media query for even smaller screens */
+
 @media (max-width: 480px) {
     footer {
         padding: 10px;
     }
     .footer-logo img {
-        width: 20px; /* Adjust based on your logo size */
+        width: 20px; 
     }
 }
+
+*/

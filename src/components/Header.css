@@ -1,20 +1,22 @@
-.header {
+header {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
+    height: 10vh;
     padding: 20px;
+    background-color: #eaeaea;
 }
 
-.logo-container {
+/* .logo-container {
     display: flex;
     align-items: center;
-}
+} */
 
 .logo-container img {
-    width: 150px; /* Adjust based on your logo size */
+    width: 150px;
     margin-right: 10px;
 }
 
-.logo-container span {
+/* .logo-container span {
     font-weight: bold;
-}
+} */
