@@ -49,8 +49,9 @@ main button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* height: 100%; */
     padding: 50px 50px;
+    /* height: 100%; */
+    /* width: 60vw; */
     /* border: 1px solid; */
 }
 
@@ -59,7 +60,8 @@ main button {
     align-items: center;
     margin: 0;
     padding: 50px;
-    border: 1px solid;
+    /* width: 40vw; */
+    /* border: 1px solid; */
 }
 
 .hero img {
@@ -99,35 +101,49 @@ main button {
 } */
 
 .specials {
+    display: flex;
+    flex-direction: column;
     background-color: white;
+    justify-content:space-between;
+    max-width: 960px;
+    padding: 0;
+    margin: 0 auto;
+    /* border: 1px solid; */
 }
 
 .specials-menu-container {
     display: flex;
+    /* width: 100%; */
     justify-content: space-between;
     align-items: center;
-    margin: 0;
-    padding: 0 50px;
-    border: 1px solid;
+    margin: 20px 50px;
+    /* border: 1px solid; */
 }
-
 
 .specials-menu-container h3 {
     display: flex;
     margin: 0;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .special-card-container {
     display: flex;
     justify-content: space-evenly;
-    border: 1px solid;
+    margin: auto;
+    padding: 0 0 60px 0;
+    /* border: 1px solid; */
 }
 
 .special-card {
+    display: flex;
+    flex-direction: column;
     margin: 10px;
-    padding: 10px;
-    border: 1px solid;
+    padding: 0px;
+    justify-content: space-between;
+    align-items: start;
+    background-color:#edefee;
+    width: 260px;
+    /* border: 1px solid; */
 }
 
 .special-card p {
@@ -135,7 +151,58 @@ main button {
     align-items: center;
     margin: 10px;
     /* padding: 10px; */
+    /* border: 1px solid; */
+}
+
+/* .special-card-content {
     border: 1px solid;
+} */
+
+.special-card-image {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.special-card-title-price {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 10px;
+    /* padding: 0px; */
+    /* border: 1px solid; */
+}
+
+.special-card-title-price h5 {
+    margin: 0;
+    /* border: 1px solid; */
+}
+
+.dish-name {
+    font-family: "Instrument Sans";
+    font-weight: bold;
+}
+
+.dish-price {
+    font-family: "Instrument Sans";
+    font-weight: bold;
+    color: firebrick;
+}
+
+/* .special-card-delivery-container {
+    border: 1px solid;
+} */
+
+.special-card-order-delivery {
+    align-content: end;
+    margin: 10px;
+    /* border: 1px solid; */
+}
+
+.special-card-order-delivery h6 {
+    font-weight: bold;
+    margin: auto;
+    /* border: 1px solid; */
 }
 
 .customer-reviews {
@@ -145,23 +212,72 @@ main button {
 .customer-reviews h3 {
     display: flex;
     justify-content: center;
-    padding: 10px;
-    border: 1px solid;
+    padding: 60px 0 20px 0;
+    /* border: 1px solid; */
 }
 
 .review-card-container {
     display: flex;
     justify-content: space-evenly;
-    border: 1px solid;
-    padding: 20px;
+    padding: 0 0 60px 0;
+    /* border: 1px solid; */
 }
 
 .review-card-container p {
     display: flex;
     align-items: center;
     margin: 0;
+    /* border: 1px solid; */
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 200px;
+    min-width: 200px;
+    margin: 10px;
+    /* border: 1px solid; */
+}
+
+.review-name-and-rating {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+.review-name-and-rating h6 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.review-text {
+    padding: 10px;
 }
 
 .about {
     background-color: #495E57;
+    padding: 20px;
+}
+
+.about-container {
+    display: flex;
+}
+
+.about-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+.about-text-container p {
+    color: white;
+}
+
+.about-image-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
 }
