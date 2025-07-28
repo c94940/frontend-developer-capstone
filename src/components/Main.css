@@ -1,283 +1,248 @@
+:root {
+  --font-primary: 'Instrument Sans', sans-serif;
+  --font-secondary: 'Merriweather', serif;
+  --color-primary: #495E57;
+  --color-accent: #F4CE14;
+  --color-bg-light: #edefee;
+  --color-danger: firebrick;
+  --color-white: #fff;
+  --color-black: #000;
+}
+
 main {
-    font-family: 'Instrument Sans';
+  font-family: var(--font-primary);
 }
 
-main h1 {
-    font-family: 'Instrument Sans';
-    font-size: 48pt;
-    font-weight:bold;
-    color: #F4CE14;
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
 }
 
-main h2 {
-    font-size: 32pt;
-    font-family:'Merriweather';
-    color: white;
+h1 {
+  font-size: 48pt;
+  font-weight: bold;
+  color: var(--color-accent);
 }
 
-main h3 {
-    font-size: 24pt;
-    font-family:'Merriweather';
-    color: #495E57;
+h2 {
+  font-size: 32pt;
+  font-family: var(--font-secondary);
+  color: var(--color-white);
 }
 
-main p {
-    font-size: 12pt;
-    font-family: 'Merriweather';
-    color: black;
+h3 {
+  font-size: 24pt;
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
 }
 
-main button {
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #F4CE14;
-    color: #495E57;
-    font-weight: bold;
-    font-size: 16pt;
-    border-radius: 10pt;
-    border: none;
-    /* box-shadow: 2px 2px 5px white; */
+p {
+  font-size: 12pt;
+  font-family: var(--font-secondary);
+  color: var(--color-black);
+}
+
+button {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 16pt;
+  border-radius: 10pt;
+  border: none;
 }
 
 .hero {
-    display: flex;
-    background-color: #495E57;
-    /* height: 400px; */
+  display: flex;
+  background-color: var(--color-primary);
 }
 
 .hero-flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 50px 50px;
-    /* height: 100%; */
-    /* width: 60vw; */
-    /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
 }
 
 .hero-image-container {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 50px;
-    /* width: 40vw; */
-    /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  padding: 50px;
 }
 
 .hero img {
-    height: 300px;
-    margin: 0px;
-    padding: 0px;
+  height: 300px;
 }
 
-/* .hero h1 {
+.hero h1 {
+    color: var(--color-accent);
+    font-weight: bold;
     font-size: 48pt;
-    font-weight:bold;
-    color: #F4CE14;
-} */
+    margin: 0;
+}
 
-/* .hero h2 {
+.hero h2 {
+    color: var(--color-white);
     font-size: 32pt;
-    font-family:'Merriweather';
-    color: white;
-} */
+}
 
 .hero p {
-    font-size: 12pt;
-    font-family: 'Merriweather';
-    color: white;
+  color: var(--color-white);
 }
 
-/* .hero button {
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #F4CE14;
-    color: black;
-    font-weight: bold;
-    font-size: 16pt;
+.hero button {
     border-radius: 10pt;
-    border: none;
-    box-shadow: 2px 2px 5px white;
-} */
+}
 
 .specials {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    justify-content:space-between;
-    max-width: 960px;
-    padding: 0;
-    margin: 0 auto;
-    /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .specials-menu-container {
-    display: flex;
-    /* width: 100%; */
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 50px;
-    /* border: 1px solid; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 50px 20px;
+  max-width: 1080px;
 }
 
-.specials-menu-container h3 {
-    display: flex;
+.specials h3 {
+    color: var(--color-primary);
+    font-size: 24pt;
     margin: 0;
-    /* border: 1px solid; */
+}
+
+.specials button {
+    border-radius: 10pt;
 }
 
 .special-card-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin: auto;
-    padding: 0 0 60px 0;
-    /* border: 1px solid; */
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 60px;
 }
 
 .special-card {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    padding: 0px;
-    justify-content: space-between;
-    align-items: start;
-    background-color:#edefee;
-    width: 260px;
-    /* border: 1px solid; */
-}
-
-.special-card p {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    /* padding: 10px; */
-    /* border: 1px solid; */
-}
-
-/* .special-card-content {
-    border: 1px solid;
-} */
-
-.special-card-image {
-    margin: 0;
-    padding: 0;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: var(--color-bg-light);
+  width: 260px;
+  justify-content: space-between;
 }
 
 .special-card-title-price {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    margin: 10px;
-    /* padding: 0px; */
-    /* border: 1px solid; */
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
 }
 
-.special-card-title-price h5 {
-    margin: 0;
-    /* border: 1px solid; */
-}
-
-.dish-name {
-    font-family: "Instrument Sans";
-    font-weight: bold;
+.dish-name, .dish-price {
+  font-family: var(--font-primary);
+  font-weight: bold;
 }
 
 .dish-price {
-    font-family: "Instrument Sans";
-    font-weight: bold;
-    color: firebrick;
+  color: var(--color-danger);
 }
 
-/* .special-card-delivery-container {
-    border: 1px solid;
-} */
+.special-card-description {
+    margin: 10px;
+}
 
 .special-card-order-delivery {
-    align-content: end;
-    margin: 10px;
-    /* border: 1px solid; */
+  margin: 10px;
 }
 
 .special-card-order-delivery h6 {
-    font-weight: bold;
-    margin: auto;
-    /* border: 1px solid; */
+  font-weight: bold;
 }
 
 .customer-reviews {
-    background-color: #F4CE14;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-accent);
 }
 
 .customer-reviews h3 {
-    display: flex;
-    justify-content: center;
-    padding: 60px 0 20px 0;
-    /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+  font-size: 24pt;
+  color: var(--color-primary);
+  padding: 60px 0 20px 0;
 }
 
 .review-card-container {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 0 60px 0;
-    /* border: 1px solid; */
-}
-
-.review-card-container p {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    /* border: 1px solid; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: top;
+  padding-bottom: 60px;
+  max-width: 1080px;
 }
 
 .review-card {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    max-width: 200px;
-    min-width: 200px;
-    margin: 10px;
-    /* border: 1px solid; */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  max-width: 200px;
+  min-width: 200px;
+  margin: 10px;
 }
 
 .review-name-and-rating {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid;
 }
 
-.review-name-and-rating h6 {
+.review-name h6 {
     font-weight: bold;
-    margin: 0;
 }
 
 .review-text {
-    padding: 10px;
+  padding: 10px;
 }
 
 .about {
-    background-color: #495E57;
-    padding: 20px;
+  background-color: var(--color-primary);
+  padding: 20px;
+}
+
+.about h1 {
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 48pt;
+    margin: 0;
+}
+
+.about h2 {
+    color: var(--color-white);
+    font-size: 32pt;
 }
 
 .about-container {
-    display: flex;
+  display: flex;
 }
 
 .about-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
 }
 
 .about-text-container p {
-    color: white;
+  color: var(--color-white);
 }
 
 .about-image-container {
-    display: flex;
-    align-items: center;
-    margin: 20px;
+  display: flex;
+  align-items: center;
+  margin: 20px;
 }
