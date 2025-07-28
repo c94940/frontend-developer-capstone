@@ -1,5 +1,5 @@
 import Nav from './Nav';
-import logo from '/Users/chriswilliams/Desktop/dev/coursera/frontend-development/capstone/src/assets/Logo.svg';
+import logo from '../assets/Logo.svg';
 import './Header.css';
 
 function Header() {

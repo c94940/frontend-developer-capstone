@@ -1,7 +1,7 @@
 import "./Footer.css";
-import logo from '/Users/chriswilliams/Desktop/dev/coursera/frontend-development/capstone/src/assets/Logo.svg';
+import logo from '../assets/Logo.svg';
 
-function Footer() {
+const Footer = () => {
     return (
         <footer className="footer">
             <div className="logo-container">
