@@ -5,10 +5,10 @@ import './Header.css';
 const Header = () => {
     return (
         <header className="header">
-            <div className="logo-container">
+            <div className="header__logo">
                 <img src={logo} alt="Little Lemon logo"/>
             </div>
-            <Nav />
+            <Nav className="header__nav" />
         </header>
     );
 };
