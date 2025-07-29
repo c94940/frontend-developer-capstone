@@ -3,7 +3,7 @@ import "./Reservation.css";
 
 const Reservation = () => {
   return (
-    <div className="reservation">
+    <section className="reservation">
       <div className="reservation-container">
         <h3>Make a reservation</h3>
         <div className="reservation-form-container">
@@ -27,7 +27,7 @@ const Reservation = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
