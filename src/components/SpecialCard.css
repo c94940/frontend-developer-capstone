@@ -1,0 +1,35 @@
+.special-card {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: var(--color-bg-light);
+  width: 260px;
+  justify-content: space-between;
+}
+
+.special-card-title-price {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.dish-name, .dish-price {
+  font-family: var(--font-primary);
+  font-weight: bold;
+}
+
+.dish-price {
+  color: var(--color-danger);
+}
+
+.special-card-description {
+    margin: 10px;
+}
+
+.special-card-order-delivery {
+  margin: 10px;
+}
+
+.special-card-order-delivery h6 {
+  font-weight: bold;
+}

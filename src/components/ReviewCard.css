@@ -1,0 +1,24 @@
+.review-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  max-width: 200px;
+  min-width: 200px;
+  margin: 10px;
+  border-radius: 10pt;
+}
+
+.review-name-and-rating {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+
+.review-name h6 {
+    font-weight: bold;
+}
+
+.review-text {
+  padding: 10px;
+}
