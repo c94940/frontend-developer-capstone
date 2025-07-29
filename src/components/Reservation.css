@@ -1,0 +1,28 @@
+.reservation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.reservation-container h3 {
+  color: var(--color-primary);
+  font-size: 24pt;
+  margin-bottom: 20px;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  font-weight: bold;
+}
+
+.reservation-form label, input, textarea {
+  margin: 10px 0 0 0;
+}
+
+.reservation-form button {
+  margin: 10px 0;
+  border-radius: 10pt;
+}

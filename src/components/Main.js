@@ -4,6 +4,7 @@ import greeksaladimage from '../assets/special-card-greek-salad.jpg';
 import bruschettaimage from '../assets/special-card-bruschetta.jpg';
 import souvlakiimage from '../assets/special-card-souvlaki.jpg';
 import aboutimage1 from '../assets/about-image-1.jpg';
+import Reservation from './Reservation';
 
 const specials = [
   {
@@ -142,31 +143,7 @@ function Main() {
         </div>
       </section>
 
-      <section className="reservation">
-        <div className="reservation-container">
-          <h3>Make a reservation</h3>
-          <div className="reservation-form-container">
-            <form className="reservation-form">
-              <label htmlFor="name">Name:</label>
-              <input type="text" id="name" placeholder="Name" required />
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" placeholder="Email" required />
-              <label htmlFor="phone">Phone:</label>
-              <input type="tel" id="phone" placeholder="Phone" required />
-              <label htmlFor="date">Date:</label>
-              <input type="date" id="date" placeholder="Date" required />
-              <label htmlFor="time">Time:</label>
-              <input type="time" id="time" placeholder="Time" min="10 AM" max="9 PM" required />
-              <label htmlFor="guests">Number of guests:</label>
-              <input type="number" id="guests" placeholder="Number of guests" min="1" max="10" required />
-              <label htmlFor="request">Special requests:</label>
-              <textarea id="request" placeholder="Any special requests?" rows="4"></textarea>
-              <button type="submit">Reserve</button>
-              <p className="reservation-note">We will contact you to confirm your reservation.</p>
-            </form>
-          </div>
-        </div>
-      </section>
+      <Reservation className="reservation-form" />
     </main>
   );
 }

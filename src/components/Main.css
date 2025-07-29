@@ -204,6 +204,7 @@ button {
   .specials-menu-container {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .specials-menu-container h3 {
@@ -271,7 +272,6 @@ button {
   }
 }
 
-
 .about {
   background-color: var(--color-primary);
   padding: 20px;
@@ -291,13 +291,16 @@ button {
 
 .about-container {
   display: flex;
+  justify-content: center;
 }
 
 .about-text-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px;
+  padding: 0 40px;
+  max-width: 500px;
+  /* border: 1px solid; */
 }
 
 .about-text-container p {
@@ -334,27 +337,4 @@ button {
   .about-image-container img {
     height: 240px;
   }
-}
-
-.reservation-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-}
-
-.reservation-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  font-weight: bold;
-}
-
-.reservation-form label, input, textarea {
-  margin: 10px 0;
-}
-
-.reservation-form button {
-  margin: 10px 0;
-  border-radius: 10pt;
 }
