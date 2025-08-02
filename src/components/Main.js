@@ -1,12 +1,13 @@
 import './Main.css';
-import greeksaladimage from '../assets/special-card-greek-salad.jpg';
-import bruschettaimage from '../assets/special-card-bruschetta.jpg';
-import souvlakiimage from '../assets/special-card-souvlaki.jpg';
-import Reservation from './Reservation';
+
 import Hero from './Hero';
 import Specials from './Specials';
 import Reviews from './Reviews';
 import About from './About';
+
+import greeksaladimage from '../assets/special-card-greek-salad.jpg';
+import bruschettaimage from '../assets/special-card-bruschetta.jpg';
+import souvlakiimage from '../assets/special-card-souvlaki.jpg';
 
 const specials = [
   {
@@ -55,6 +56,7 @@ const reviews = [
 function Main() {
   return (
     <main>
+      
       <Hero className="hero" />
 
       <Specials className="specials" specials={specials} />
@@ -63,7 +65,6 @@ function Main() {
 
       <About className="about" />
 
-      <Reservation className="reservation-form" />
     </main>
   );
 }

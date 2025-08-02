@@ -1,7 +1,6 @@
-import React from 'react';
-import "./Reservation.css";
+import "./ReservationForm.css";
 
-const Reservation = () => {
+const ReservationForm = () => {
   return (
     <section className="reservation">
       <div className="reservation-container">
@@ -31,4 +30,4 @@ const Reservation = () => {
   );
 }
 
-export default Reservation;
+export default ReservationForm;
