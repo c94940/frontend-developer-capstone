@@ -1,7 +1,7 @@
-import { useState } from "react";
-import "./ReservationForm.css";
+import { useState } from 'react';
+import './ReservationForm.css';
 
-const ReservationForm = () => {
+const ReservationForm = ({ availableTimes, dispatch }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -9,6 +9,8 @@ const ReservationForm = () => {
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState("");
   const [request, setRequest] = useState("");
+
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -42,7 +44,7 @@ const ReservationForm = () => {
               placeholder="Name"
               required
               value={name}
-              onChange={event => setName(event.target.value)}
+              onChange={(event) => setName(event.target.value)}
             />
             <label htmlFor="email">Email:</label>
             <input
@@ -51,7 +53,7 @@ const ReservationForm = () => {
               placeholder="Email"
               required
               value={email}
-              onChange={event => setEmail(event.target.value)}
+              onChange={(event) => setEmail(event.target.value)}
             />
             <label htmlFor="phone">Phone:</label>
             <input
@@ -60,7 +62,7 @@ const ReservationForm = () => {
               placeholder="Phone"
               required
               value={phone}
-              onChange={event => setPhone(event.target.value)}
+              onChange={(event) => setPhone(event.target.value)}
             />
             <label htmlFor="date">Date:</label>
             <input
@@ -69,19 +71,23 @@ const ReservationForm = () => {
               placeholder="Date"
               required
               value={date}
-              onChange={event => setDate(event.target.value)}
+              onChange={(event) => {
+                setDate(event.target.value);
+                dispatch({ type: "UPDATE_TIMES", date: event.target.value });
+              }}
             />
             <label htmlFor="time">Time:</label>
-            <input
-              type="time"
+            <select
               id="time"
-              placeholder="Time"
-              min="10:00"
-              max="21:00"
-              required
               value={time}
-              onChange={event => setTime(event.target.value)}
-            />
+              onChange={(event) => setTime(event.target.value)}
+            >
+              <option value="">Select a time</option>
+              {availableTimes.map((t) => (
+                <option key={t} value={t}>{t}</option>
+              ))}
+            
+            </select>
             <label htmlFor="guests">Number of guests:</label>
             <input
               type="number"
@@ -91,7 +97,7 @@ const ReservationForm = () => {
               max="10"
               required
               value={guests}
-              onChange={event => setGuests(event.target.value)}
+              onChange={(event) => setGuests(event.target.value)}
             />
             <label htmlFor="request">Special requests:</label>
             <textarea
@@ -99,7 +105,7 @@ const ReservationForm = () => {
               placeholder="Any special requests or occasions?"
               rows="4"
               value={request}
-              onChange={event => setRequest(event.target.value)}
+              onChange={(event) => setRequest(event.target.value)}
             ></textarea>
             <button type="submit">Reserve</button>
             <p className="reservation-note">We will contact you to confirm your reservation.</p>
