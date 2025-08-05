@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './ReservationForm.css';
 
-const ReservationForm = ({ availableTimes, dispatch }) => {
+const ReservationForm = ({ availableTimes, dispatch, submitForm }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -10,11 +10,21 @@ const ReservationForm = ({ availableTimes, dispatch }) => {
   const [guests, setGuests] = useState("");
   const [request, setRequest] = useState("");
 
-  
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Logic for Submit goes here
+    const formData = {
+      name,
+      email,
+      phone,
+      date,
+      time,
+      guests,
+      request
+    };
+    submitForm(formData);
     setName("");
     setEmail("");
     setPhone("");
@@ -86,7 +96,7 @@ const ReservationForm = ({ availableTimes, dispatch }) => {
               {availableTimes.map((t) => (
                 <option key={t} value={t}>{t}</option>
               ))}
-            
+
             </select>
             <label htmlFor="guests">Number of guests:</label>
             <input
