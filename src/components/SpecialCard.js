@@ -2,7 +2,7 @@ import './SpecialCard.css';
 
 const SpecialCard = ({ image, name, price, description }) => {
     return (
-        <div className="special-card">
+        <article className="special-card">
             <div className="special-card-content">
                 <div className="special-card-image">
                     <img src={image} alt={name} />
@@ -19,10 +19,14 @@ const SpecialCard = ({ image, name, price, description }) => {
             </div>
             <div className="special-card-delivery-container">
                 <div className="special-card-order-delivery">
-                    <h6>Order delivery 🛵</h6>
+                    <h6>
+                        <button aria-label={`Order ${name} for delivery`}>
+                            Order delivery 🛵
+                        </button>
+                    </h6>
                 </div>
             </div>
-        </div>
+        </article>
     );
 }
 

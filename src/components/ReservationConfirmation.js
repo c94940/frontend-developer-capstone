@@ -5,7 +5,13 @@ const ReservationConfirmation = () => {
     return (
         <>
             <Header />
-            <h1 style={{ textAlign: 'center', padding: '2rem' }}>Thank you. Your reservation has been confirmed.</h1>
+            <main>
+                <section aria-labelledby="confirmation-heading">
+                    <h1 id="confirmation-heading" style={{ textAlign: 'center', padding: '2rem' }}>
+                        Thank you. Your reservation has been confirmed.
+                    </h1>
+                </section>
+            </main>
             <Footer />
         </>
     );

@@ -53,9 +53,9 @@ const ReservationForm = ({ availableTimes, dispatch, submitForm }) => {
 
 
   return (
-    <section className="reservation">
+    <section className="reservation" aria-labelledby="reservation-heading">
       <div className="reservation-container">
-        <h3>Make a reservation</h3>
+        <h3 id="reservation-heading">Make a reservation</h3>
         <div className="reservation-form-container">
           <form className="reservation-form" onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>
@@ -67,9 +67,13 @@ const ReservationForm = ({ availableTimes, dispatch, submitForm }) => {
               minLength={2}
               value={name}
               onChange={(event) => setName(event.target.value)}
+              aria-invalid={name && name.trim().length < 2 ? "true" : "false"}
+              aria-describedby={name && name.trim().length < 2 ? "name-error" : undefined}
             />
             {name && name.trim().length < 2 && (
-              <span className="error">Name must be at least 2 characters.</span>
+              <span className="error" id="name-error" aria-live="polite">
+                Name must be at least 2 characters.
+              </span>
             )}
             <label htmlFor="email">Email:</label>
             <input
@@ -79,9 +83,13 @@ const ReservationForm = ({ availableTimes, dispatch, submitForm }) => {
               required
               value={email}
               onChange={(event) => setEmail(event.target.value)}
+              aria-invalid={email && !/\S+@\S+\.\S+/.test(email) ? "true" : "false"}
+              aria-describedby={email && !/\S+@\S+\.\S+/.test(email) ? "email-error" : undefined}
             />
             {email && !/\S+@\S+\.\S+/.test(email) && (
-              <span className="error">Please enter a valid email address.</span>
+              <span className="error" id="email-error" aria-live="polite">
+                Please enter a valid email address.
+              </span>
             )}
             <label htmlFor="phone">Phone:</label>
             <input
@@ -92,9 +100,13 @@ const ReservationForm = ({ availableTimes, dispatch, submitForm }) => {
               pattern="\d{10,}"
               value={phone}
               onChange={(event) => setPhone(event.target.value)}
+              aria-invalid={phone && !/^\d{10,}$/.test(phone) ? "true" : "false"}
+              aria-describedby={phone && !/^\d{10,}$/.test(phone) ? "phone-error" : undefined}
             />
             {phone && !/^\d{10,}$/.test(phone) && (
-              <span className="error">Phone number must be at least 10 digits.</span>
+              <span className="error" id="phone-error" aria-live="polite">
+                Phone number must be at least 10 digits.
+              </span>
             )}
             <label htmlFor="date">Date:</label>
             <input
@@ -108,9 +120,13 @@ const ReservationForm = ({ availableTimes, dispatch, submitForm }) => {
                 setDate(event.target.value);
                 dispatch({ type: "UPDATE_TIMES", date: event.target.value });
               }}
+              aria-invalid={date && date < todayStr ? "true" : "false"}
+              aria-describedby={date && date < todayStr ? "date-error" : undefined}
             />
             {date && date < todayStr && (
-              <span className="error">Date cannot be in the past.</span>
+              <span className="error" id="date-error" aria-live="polite">
+                Date cannot be in the past.
+              </span>
             )}
             <label htmlFor="time">Time:</label>
             <select
@@ -118,6 +134,8 @@ const ReservationForm = ({ availableTimes, dispatch, submitForm }) => {
               required
               value={time}
               onChange={(event) => setTime(event.target.value)}
+              aria-invalid={!time ? "true" : "false"}
+              aria-describedby={!time ? "time-error" : undefined}
             >
               <option value="">Select a time</option>
               {availableTimes.map((t) => (
@@ -126,7 +144,9 @@ const ReservationForm = ({ availableTimes, dispatch, submitForm }) => {
 
             </select>
             {!time && (
-              <span className="error">Please select a time.</span>
+              <span className="error" id="time-error" aria-live="polite">
+                Please select a time.
+              </span>
             )}
             <label htmlFor="guests">Number of guests:</label>
             <input
@@ -138,9 +158,13 @@ const ReservationForm = ({ availableTimes, dispatch, submitForm }) => {
               required
               value={guests}
               onChange={(event) => setGuests(event.target.value)}
+              aria-invalid={guests && (guests < 1 || guests > 10) ? "true" : "false"}
+              aria-describedby={guests && (guests < 1 || guests > 10) ? "guests-error" : undefined}
             />
             {guests && (guests < 1 || guests > 10) && (
-              <span className="error">Number of guests must be between 1 and 10.</span>
+              <span className="error" id="guests-error" aria-live="polite">
+                Number of guests must be between 1 and 10.
+              </span>
             )}
             <label htmlFor="request">Special requests:</label>
             <textarea
@@ -150,11 +174,21 @@ const ReservationForm = ({ availableTimes, dispatch, submitForm }) => {
               maxLength={200}
               value={request}
               onChange={(event) => setRequest(event.target.value)}
+              aria-invalid={request && request.length > 200 ? "true" : "false"}
+              aria-describedby={request && request.length > 200 ? "request-error" : undefined}
             ></textarea>
             {request && request.length > 200 && (
-              <span className="error">Special requests must be 200 characters or less.</span>
+              <span className="error" id="request-error" aria-live="polite">
+                Special requests must be 200 characters or less.
+              </span>
             )}
-            <button type="submit" disabled={!isFormValid()}>Reserve</button>
+            <button 
+              type="submit" 
+              disabled={!isFormValid()} 
+              aria-label="Reserve a table"
+            >
+              Reserve
+            </button>
             <p className="reservation-note">We will contact you to confirm your reservation.</p>
           </form>
         </div>
