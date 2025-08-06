@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="logo-container">
                 <img src={logo} alt="Little Lemon logo" />
             </div>
-            <nav className="footer-container" aria-label="Footer navigation">
+            <div className="footer-container" aria-label="Footer navigation">
                 <h5 id="nav-heading">Navigation</h5>
                 <ul aria-labelledby="nav-heading">
                     <li><Link to="/" aria-label="Home page">Home</Link></li>
@@ -18,7 +18,7 @@ const Footer = () => {
                     <li><a href="#" aria-label="Order online page">Order Online</a></li>
                     <li><a href="#" aria-label="Login page">Login</a></li>
                 </ul>
-            </nav>
+            </div>
             <div className="footer-container">
                 <h5 id="contact-heading">Contact</h5>
                 <ul aria-labelledby="contact-heading">
